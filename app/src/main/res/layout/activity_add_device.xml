@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="se07.smart_ble.AddDeviceActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_newName"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:layout_below="@+id/label_newName"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="New PIN:"
+        android:id="@+id/label_PIN"
+        android:paddingTop="0dp"
+        android:layout_below="@+id/editText_newName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_PIN"
+        android:layout_below="@+id/label_PIN"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:inputType="numberPassword"
+        android:singleLine="false"
+        android:phoneNumber="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="PIN again:"
+        android:id="@+id/label_againPIN"
+        android:layout_below="@+id/editText_PIN"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_againPIN"
+        android:inputType="numberPassword"
+        android:singleLine="false"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/label_againPIN"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:autoText="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView3"
+        android:background="#b8b8b8"
+        android:layout_below="@+id/label_defaultName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="New Name:"
+        android:id="@+id/label_newName"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/button_saveAddDevice"
+        android:background="#3d8bcd"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/button_cancelAddDevice"
+        android:layout_below="@+id/button_saveAddDevice"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/button_saveAddDevice"
+        android:layout_marginTop="10dp"
+        android:background="#eeeeee" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Device Name:"
+        android:id="@+id/label_defaultName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="LOCK 01"
+        android:layout_above="@+id/textView3"
+        android:layout_toEndOf="@+id/label_defaultName"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
+        android:id="@+id/textView_defaultName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="MAC Address:"
+        android:id="@+id/label_MAC"
+        android:layout_below="@+id/label_defaultName"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="80-E2-4C-5E-61-58"
+        android:id="@+id/textView_MAC"
+        android:layout_below="@+id/label_defaultName"
+        android:layout_toEndOf="@+id/label_defaultName"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="* PIN does not match"
+        android:id="@+id/textView"
+        android:layout_below="@+id/editText_againPIN"
+        android:layout_alignParentStart="true"
+        android:textColor="#ff0000"
+        android:layout_marginTop="5dp" />
+
+</RelativeLayout>
