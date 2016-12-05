@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -52,6 +54,14 @@ public class ListDeviceActivity extends AppCompatActivity {
 
         //Set data to listView
         listView_listDevice.setAdapter(adapter_listDevice);
+
+        listView_listDevice.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(_context, PinAccessActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

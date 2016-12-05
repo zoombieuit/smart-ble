@@ -1,13 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="se07.smart_ble.PinAccessActivity">
+    android:layout_height="fill_parent"
+    tools:context="se07.smart_ble.PinAccessActivity"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:visibility="visible">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter PIN code to access lock"
+        android:id="@+id/textView_lockName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:password="false"
+        android:phoneNumber="false"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="PIN is not correct, please try again"
+        android:id="@+id/textView_pinAlert"
+        android:layout_below="@+id/textView_lockName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignEnd="@+id/textView_lockName"
+        android:gravity="center_horizontal"
+        android:textColor="#ff0000" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2,3"
+        android:layout_below="@+id/textView_pinAlert"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView_num1"
+                android:layout_alignTop="@+id/linearLayout"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:background="#e2e2e2"
+                android:password="false"
+                android:textStyle="bold"
+                android:layout_column="0"
+                android:paddingTop="20dp"
+                android:paddingBottom="25dp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView_num2"
+                android:layout_alignTop="@+id/linearLayout"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:background="#e2e2e2"
+                android:password="false"
+                android:textStyle="bold"
+                android:layout_column="1"
+                android:paddingTop="20dp"
+                android:paddingBottom="25dp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView_num3"
+                android:layout_alignTop="@+id/linearLayout"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:background="#e2e2e2"
+                android:password="false"
+                android:textStyle="bold"
+                android:layout_column="2"
+                android:paddingTop="20dp"
+                android:paddingBottom="25dp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView_num4"
+                android:layout_alignTop="@+id/linearLayout"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:background="#e2e2e2"
+                android:password="false"
+                android:textStyle="bold"
+                android:layout_column="3"
+                android:paddingTop="20dp"
+                android:paddingBottom="25dp"
+                android:textAlignment="center" />
+        </TableRow>
+    </TableLayout>
+
+    <GridView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridView"
+        android:layout_alignParentStart="true"
+        android:numColumns="3"
+        android:textAlignment="center"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="2dp"
+        android:horizontalSpacing="2dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:stackFromBottom="false"
+        android:visibility="visible" />
 
 </RelativeLayout>

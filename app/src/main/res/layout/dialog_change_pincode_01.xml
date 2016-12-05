@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress|numberPassword"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/editText_rootEmail"
         android:enabled="false"
         android:text="youremail@example.com" />
 
@@ -44,13 +44,13 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText2" />
+        android:id="@+id/editText_rootPassword" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="NEXT"
-        android:id="@+id/button"
+        android:id="@+id/button_changePinNext"
         android:textColor="#ffffff"
         android:background="#3D8BCD"
         android:layout_marginTop="10dp"
@@ -60,7 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CANCEL"
-        android:id="@+id/button2"
+        android:id="@+id/button_changePinCancel"
         android:textColor="#000000"
         android:background="#eeeeee"
         android:layout_marginTop="10dp"
